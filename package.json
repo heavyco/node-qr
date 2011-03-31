@@ -1,7 +1,7 @@
 {
     "name": "qr",
-    "descrption": "A small library to generate QR codes with libqrencode.",
-    "version": "0.1.0",
+    "description": "A small library to generate QR codes with libqrencode.",
+    "version": "0.1.1",
     "author": "Brian Celenza <bcelenza@gmail.com>",
     "keywords": ["qr", "qrcode", "qrencode", "qrencoder"],
     "main": "./qr.js",
