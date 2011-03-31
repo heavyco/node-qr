@@ -107,6 +107,7 @@ vows.describe('Encoder').addBatch({
                 },
                 'emits an \'error\' event with Error': function(result, encoder) {
                     assert.ok((result instanceof Error));
+                    assert.notEqual(result.message, null);
                 }
             }
         }
