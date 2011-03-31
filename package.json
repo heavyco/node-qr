@@ -6,7 +6,7 @@
         "name": "Brian Celenza",
         "email": "bcelenza@gmail.com"
     },
-    "homepage": "https://github.com/bcelenza/node-qr"
+    "homepage": "https://github.com/bcelenza/node-qr",
     "keywords": ["qr", "qrcode", "qrencode", "qrencoder"],
     "main": "./qr.js",
     "dependencies": {
