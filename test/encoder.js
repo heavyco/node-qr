@@ -109,7 +109,7 @@ vows.describe('Encoder').addBatch({
                     encoder.encode('test', null, { version: 1000 });
                 },
                 'emits an \'error\' event with Error object': function(result, encoder) {
-                    assert.ok((result instanceof Error));
+                    assert.ok((result instanceof Error), 'Unexpcted result emitted with error event');
                     assert.notEqual(result.message, "");
                 }
             },
@@ -121,9 +121,20 @@ vows.describe('Encoder').addBatch({
                     encoder.encode('test', 'C:/notwindows/');
                 },
                 'emits an \'error\' event with Error object': function(result, encoder) {
-                    assert.ok((result instanceof Error));
+                    assert.ok((result instanceof Error), 'Unexpcted result emitted with error event');
                     assert.notEqual(result.message, "");
                 }
+            }
+        },
+        'without a provided value': {
+            topic: function() {
+                var encoder = new Encoder;
+                encoder.on('error', this.callback);
+                encoder.encode();
+            },
+            'emits an \'error\' event with an Error object': function(result, encoder) {
+                assert.ok((result instanceof Error), 'Unexpcted result emitted with error event');
+                assert.equal(result.message, "No value specified for encode method");
             }
         }
     }
