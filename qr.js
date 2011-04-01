@@ -1,3 +1,1 @@
-var encoder = require('./lib/encoder');
-
-exports.Encoder = encoder.Encoder;
+exports.Encoder = require('./lib/encoder').Encoder;

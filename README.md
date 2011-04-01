@@ -60,6 +60,10 @@ If at any time an error occurs, an 'error' event will be emitted
     });
     
 See the tests in test/qr.js for more ways to use the encoder.
+
+While node-qr and libqrencode can encode images up to 4000 characters, this library makes no attempt to automatically set error correction and version options based on the size of the value (yet, anyway). You are responsible for determining what length your values will be and adjusting the options accordingly.
+
+See [2D QR Code Barcode Generation Guide](http://www.idautomation.com/barcode/qr-code.html#Data_Encoded) for more information on limitations of QR Codes and the devices that read them.
     
 ## Encoder Options ##
 
@@ -67,7 +71,7 @@ The following options can be passed via the third argument of the encode method,
 
 * dot_size: specify the size of dot (pixel). (default=3)
 * margin: specify the width of margin. (default=4)
-* level: specify error collectin level from L (lowest) to H (highest). (default=L)
+* level: specify error correction level from L (lowest) to H (highest). (default=L)
 * case_sensitive: ignore case distinctions and use only upper-case characters. (default=true)
 * version: specify the version of the symbol. (default=1)
 

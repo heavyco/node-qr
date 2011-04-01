@@ -15,7 +15,10 @@ vows.describe('Encoder').addBatch({
             assert.ok((encoder instanceof events.EventEmitter));
         },
         'has some default options': function(encoder) {
-            assert.ok(encoder.options);
+            assert.ok(encoder.default_options);
+        },
+        'has an encode method': function(encoder) {
+            assert.ok((typeof encoder.encode == "function"));
         }
     }
 }).addBatch({
@@ -71,7 +74,7 @@ vows.describe('Encoder').addBatch({
                 },
                 'provides PNG data with a custom margin': function(result, encoder) {
                     assert.ok((result instanceof Buffer));
-                    assert.equal(result.length, 339, 'Unexpected buffer length for custom margin');
+                    assert.equal(result.length, 235, 'Unexpected buffer length for custom margin');
                 }
             },
             'and a custom level option': {
@@ -83,7 +86,7 @@ vows.describe('Encoder').addBatch({
                 },
                 'provides PNG data with a custom level': function(result, encoder) {
                     assert.ok((result instanceof Buffer));
-                    assert.equal(result.length, 330, 'Unexpected buffer length for custom level');
+                    assert.equal(result.length, 231, 'Unexpected buffer length for custom level');
                 }
             },
             'and a custom version option': {
@@ -95,7 +98,7 @@ vows.describe('Encoder').addBatch({
                 },
                 'provides PNG data with a different version': function(result, encoder) {
                     assert.ok((result instanceof Buffer));
-                    assert.equal(result.length, 1424, 'Unexpected buffer length for custom version');
+                    assert.equal(result.length, 867, 'Unexpected buffer length for custom version');
                 }
             },
             'and an invalid option': {
