@@ -22,5 +22,8 @@
     "license": {
         "type": "MIT",
         "url": "http://www.opensource.org/licenses/mit-license.php"
+    },
+    "scripts": {
+        "test": "vows --spec test/*.js"
     }
 }
