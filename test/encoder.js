@@ -3,12 +3,23 @@ var vows = require('vows'),
     assert = require('assert'),
     fs = require('fs'),
     util = require('util'),
+    child_process = require('child_process'),
     qr = require('../qr');
     
 var Encoder = qr.Encoder;
 var test_file_name = './test.png';
     
 vows.describe('Encoder').addBatch({
+    'The libqrencode library': {
+        topic: function() {
+            var which = child_process.spawn('which', ['qrencode']);
+            which.on('exit', this.callback);
+        },
+        'is installed and available via $PATH': function(exit_code, process) {
+            assert.equal(exit_code, null, 'libqrencode does not appear to have been installed properly');
+        }
+    }
+}).addBatch({
     'The encoder': { 
         topic: new(Encoder),
         'is an event emitter': function(encoder) {
