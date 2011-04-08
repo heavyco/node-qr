@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<!-- Author: Sean Owen -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="1.2">
+<jsp:directive.page contentType="application/xhtml+xml" session="false"/>
+<jsp:scriptlet>response.setHeader("Cache-Control", "public");</jsp:scriptlet>
+<jsp:text><![CDATA[<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.1//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11.dtd">]]></jsp:text>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Download ZXing Reader</title>
+  </head>
+  <body>
+    <h1><img src="zxing-icon.png" height="32" width="32" alt=""/> Download ZXing Reader</h1>
+    <p>
+      <a href="market://search?q=pname%3Acom.google.zxing.client.android">Download</a> the Android client.
+    </p>
+    <p>
+      <a href="BarcodeReader.jad">Download</a> the Barcode Reader for J2ME.
+    </p>
+    <p>
+      (<a href="basic/BarcodeReader.jad">Download</a> the alternate "basic" version for J2ME.)
+    </p> 
+    <p>Copyright 2008 and onwards ZXing authors</p>
+    <jsp:include page="analytics.jspx"/>
+  </body>
+</html>
+</jsp:root>
