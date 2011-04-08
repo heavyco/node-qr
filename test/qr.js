@@ -11,6 +11,9 @@ vows.describe('QR').addBatch({
         },
         'has an encoder object': function(qr) {
             assert.notEqual(qr.Encoder, undefined, 'QR Encoder undefined');
+        },
+        'has a decoder object': function(qr) {
+            assert.notEqual(qr.Decoder, undefined, 'QR Decoder undefined');
         }
     }
 }).export(module);
