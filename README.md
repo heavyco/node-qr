@@ -81,6 +81,10 @@ For more information around options, see the docs provided for the libqrencoder 
 
 Feedback and pull requests are always welcomed. This is a work-in-progress. Any help is greatly appreciated.
 
+## Who's Using node-qr? ##
+
+* Rax.io (Rackspace Short URL Service) - http://rax.io
+
 ## Are you using node-qr? ##
 
 If you are using Node QR in a production environment, I'd love to know! Send me a PM or email if you don't mind being listed in this readme.
