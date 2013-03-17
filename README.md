@@ -69,6 +69,8 @@ See [2D QR Code Barcode Generation Guide](http://www.idautomation.com/barcode/qr
 
 The following options can be passed via the third argument of the encode method, which should be an object
 
+* background_color: self explanatory
+* foreground_color: self explanatory
 * dot_size: specify the size of dot (pixel). (default=3)
 * margin: specify the width of margin. (default=4)
 * level: specify error correction level from L (lowest) to H (highest). (default=L)
