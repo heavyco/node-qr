@@ -18,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/cjroth/node-qr.git"
+        "url": "git://github.com/bcelenza/node-qr.git"
     },
     "license": {
         "type": "MIT",
