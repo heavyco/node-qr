@@ -112,6 +112,30 @@ vows.describe('Encoder').addBatch({
                     assert.equal(result.length, 867, 'Unexpected buffer length for custom version');
                 }
             },
+            'and a custom type option': {
+                topic: function() {
+                    var encoder = new Encoder;
+                    encoder.on('end', this.callback);
+                    // set a custom output
+                    encoder.encode('test', null, { type: 'SVG' });
+                },
+                'provides SVG data' : function(result, encoder) {
+                    assert.ok((result instanceof Buffer));
+                    assert.equal(result.length, 6206, 'Unexpected buffer length for custom type');
+                }
+            },
+            'and an invalid type option': {
+                topic: function() {
+                    var encoder = new Encoder;
+                    encoder.on('error', this.callback);
+                    // set an incorrect type option
+                    encoder.encode('test', null, { type: 'SPVG' });
+                },
+                'emits an \'error\' event with Error object' : function(result, encoder) {
+                    assert.ok((result instanceof Error), 'Unexpected result emitted with error event');
+                    assert.notEqual(result.message, "");
+                }
+            },
             'and an invalid option': {
                 topic: function() {
                     var encoder = new Encoder;
