@@ -76,6 +76,7 @@ The following options can be passed via the third argument of the encode method,
 * level: specify error correction level from L (lowest) to H (highest). (default=L)
 * case_sensitive: ignore case distinctions and use only upper-case characters. (default=true)
 * version: specify the version of the symbol. (default=1)
+* type: type of image to export ('PNG','EPS','SVG','ANSI','ANSI256','ASCII','ASCIIi','UTF8','ANSIUTF8')
 
 For more information around options, see the docs provided for the libqrencoder library [here](http://fukuchi.org/works/qrencode/index.en.html "libqrencoder")
 
