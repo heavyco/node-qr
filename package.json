@@ -1,12 +1,12 @@
 {
     "name": "qr",
     "description": "A small library to generate QR codes with libqrencode.",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "author": {
         "name": "Brian Celenza",
         "email": "bcelenza@gmail.com"
     },
-    "homepage": "https://github.com/bcelenza/node-qr",
+    "homepage": "https://github.com/heavyco/node-qr",
     "keywords": ["qr", "qrcode", "qrencode", "qrencoder"],
     "main": "./qr.js",
     "dependencies": {
@@ -18,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/bcelenza/node-qr.git"
+        "url": "git://github.com/heavyco/node-qr.git"
     },
     "license": {
         "type": "MIT",
