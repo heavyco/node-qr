@@ -6,10 +6,11 @@ node-qr is a simple NodeJS binding to the libqrencode C library written by Kenta
 
 To use node-qr, you will first need to install the libqrencode C library
 
-For Mac OS X (assumed MacPorts installed)
+For Mac OS X, compile libqrencode from source (url above) if you have XCode installed with typical configure/make/sudo make install process. Or if you have MacPorts installed: 
 
     port install qrencode
     
+
 For Ubuntu Linux
 
     apt-get install qrencode
