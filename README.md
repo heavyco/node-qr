@@ -91,3 +91,4 @@ Feedback and pull requests are always welcomed. This is a work-in-progress. Any 
 ## Are you using node-qr? ##
 
 If you are using Node QR in a production environment, I'd love to know! Send me a PM or email if you don't mind being listed in this readme.
+let's code with together
