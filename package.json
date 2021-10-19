@@ -9,7 +9,8 @@
     "homepage": "https://github.com/heavyco/node-qr",
     "keywords": ["qr", "qrcode", "qrencode", "qrencoder"],
     "main": "./qr.js",
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
         "vows": ">= 0.5.8",
         "benchmark": ""
     },
